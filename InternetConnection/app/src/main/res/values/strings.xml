@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Internet Connection</string>
+    <string name="titlehttpCode">HTTP status code</string>
+</resources>
