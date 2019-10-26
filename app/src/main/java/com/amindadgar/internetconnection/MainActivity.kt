@@ -38,8 +38,11 @@ class MainActivity : AppCompatActivity() {
         showUrlButton.setOnClickListener {
             val mText:String = input_url.text.toString()
             val intent = Intent(this,WebActivity::class.java)
-            intent.putExtra("myUrl","https://$mText")
-            startActivity(intent)
+            intent.putExtra("myUrl","$mText")
+            if (mText.contains("http"))
+                startActivity(intent)
+            else 
+                Toast.makeText(this,"Specify a protocol",Toast.LENGTH_LONG).show()
         }
     }
 
